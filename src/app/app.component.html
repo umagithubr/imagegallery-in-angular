@@ -1,0 +1,15 @@
+
+
+<div class="container">
+  <div id="arrow-left" class="arrow"></div>
+  <img style="width:100%" src="{{selectedImage}}">
+  <div id="arrow-right" class="arrow"></div>
+</div>
+<div class="row">
+  <div class="column" *ngFor="let image of imagesList">
+    <div (mouseenter)="handleImageFocus(image.url)" >
+      <img [src]="image.url" alt="Image" style="width:100%" (click)="loadSelectedImage(image.url);">
+  
+    </div>
+    </div>
+</div>
